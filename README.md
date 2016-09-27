@@ -1,4 +1,4 @@
-# Dye Sampling Protocol from Axel Brunger (with small modifications)
+# Dye Sampling Protocol from Axel Brunger
 
 ## Description
 This protocol uses CNS to sample the position of a dye (or any molecule really) that is covalently
@@ -11,9 +11,13 @@ webpage ([link](http://cns-online.org/v1.3/tutorial/fret/dye_simulations/text.ht
 1. Run `make_links.sh` to link the appropriate dye parameters in the `toppar` folder.
 
 2. Edit `sample_dye.inp` at the following points:
+
     line  23: coordinate_infile => the name of the PDB file with your molecule (and dye).
+
     line 114: atom_fixed => define a selection of atoms that are to be kept fixed during the sampling.
+
     line 196: num_trials => define the number of models to generate.
+
 
 3. Edit `dye_linkage.def` to define the attachment point of the dye.
 
