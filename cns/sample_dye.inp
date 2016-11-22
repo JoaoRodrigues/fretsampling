@@ -20,7 +20,7 @@
 {============================ coordinates ============================}
 
 {* coordinate file *}
-{===>} coordinate_infile="molecules/b2ARa_L266C_wDYE.pdb";
+{===>} coordinate_infile="";
 
 {==================== molecular information ==========================}
 
@@ -165,7 +165,7 @@
 
 {* starting temperature *}
 {* used for both constant-temperature and slowcooling schemes *}
-{===>} temperature=3000;
+{===>} temperature=300000;
 
 {* temperature control method *}
 {* either coupling to a temperature bath or velocity scaling *}
@@ -696,7 +696,7 @@
    print threshold=50.0 angle
    evaluate ($rmsd_angle=$result)
 
-   evaluate ($coordinate_outfile="models/" + &output_root + "_" + encode($trial) + ".pdb")
+   evaluate ($coordinate_outfile=&output_root + "_" + encode($trial) + ".pdb")
    set display=$coordinate_outfile end
 
    display REMARK coordinates from molecular dynamics
