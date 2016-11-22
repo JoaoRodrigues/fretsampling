@@ -41,5 +41,10 @@ else
     cd toppar
     ln -s ${1}.top dye.top
     ln -s ${1}.param dye.param
+    cd ../
+    echo "Linking dye coordinates for ${1}"
+    cd molecules
+    ln -s ${1}.pdb dye.pdb
+    cd ../
   fi
 fi
