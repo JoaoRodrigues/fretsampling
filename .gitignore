@@ -1,1 +1,4 @@
 models/
+toppar/dye.param
+toppar/dye.top
+molecules/dye.pdb
