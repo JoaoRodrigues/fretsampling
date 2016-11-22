@@ -39,11 +39,13 @@ else
   else
     echo "Linking dye topology and parameters for ${1}"
     cd toppar
+    rm -f dye.top dye.param
     ln -s ${1}.top dye.top
     ln -s ${1}.param dye.param
     cd ../
     echo "Linking dye coordinates for ${1}"
     cd molecules
+    rm -f dye.pdb
     ln -s ${1}.pdb dye.pdb
     cd ../
   fi
